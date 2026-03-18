@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Othmen Badie | Portfolio</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  scroll-behavior: smooth;
+  transition: 0.3s;
+}
+
+/* DARK MODE */
+.dark {
+  background:#111;
+  color:white;
+}
+
+/* NAVBAR */
+nav {
+  background:#222;
+  padding:15px;
+  position:fixed;
+  width:100%;
+  top:0;
+  text-align:center;
+}
+
+nav a {
+  color:white;
+  margin:15px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+nav a:hover {
+  color:#00bcd4;
+}
+
+.toggle {
+  position:absolute;
+  right:20px;
+  top:15px;
+  cursor:pointer;
+  color:white;
+}
+
+/* SECTIONS */
+section {
+  padding:100px 20px;
+  min-height:100vh;
+  text-align:center;
+}
+
+/* HOME */
+#home {
+  background:linear-gradient(to right,#00bcd4,#2196f3);
+  color:white;
+}
+
+#home img {
+  width:150px;
+  border-radius:50%;
+  margin-top:20px;
+}
+
+/* HOME CARDS */
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-card {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  width: 220px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(8, 228, 0, 0.2);
+  transition: 0.3s;
+}
+
+.dark .home-card {
+  background:#222;
+}
+
+.home-card:hover {
+  transform: scale(1.05);
+}
+
+.home-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* SKILLS */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-card {
+  background: white;
+  margin: 15px;
+  padding: 20px;
+  width: 200px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.dark .skill-card {
+  background:#222;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+}
+
+.skill-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* PROJECTS & CONTACT */
+.card {
+  background:white;
+  padding:15px;
+  margin:10px auto;
+  max-width:400px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(224, 0, 0, 0.2);
+}
+
+.dark .card {
+  background:#222;
+}
+
+/* BUTTON */
+.btn {
+  background:#00bcd4;
+  color:white;
+  padding:10px 20px;
+  border:none;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.btn:hover {
+  background:#0097a7;
+}
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical-card {
+  display: flex;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  width: 80%;
+  max-width: 700px;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(196, 184, 26, 0.856);
+  gap: 20px;
+  transition: 0.3s;
+}
+
+.dark .vertical-card {
+  background:#000000;
+}
+
+.vertical-card:hover {
+  transform: scale(1.02);
+}
+
+.vertical-card img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <span class="toggle" onclick="toggleDark()">🌙</span>
+</nav>
+
+<!-- HOME -->
+<<section id="home">
+
+  <h1>Othmen Badie</h1>
+
+  <p>
+  Développeur Web Junior diplômé en Développement des Systèmes Informatiques 💻
+  </p>
+
+  <img src="badie.png">
+
+  <br>
+  <a href="cv.pdf" download>
+    <button class="btn">📄 Télécharger CV</button>
+  </a>
+
+  <h2>Mon Parcours</h2>
+
+  <div class="vertical-container">
+
+    <!-- BAC -->
+    <div class="vertical-card">
+      <img src="bac.png">
+      <div>
+        <h3>Baccalauréat</h3>
+        <p>Informatique</p>
+        <p>Année: 2021</p>
+      </div>
+    </div>
+
+    <!-- LICENCE -->
+    <div class="vertical-card">
+      <img src="iset.png">
+      <div>
+        <h3>Licence</h3>
+        <p>Développement des Systèmes Informatiques Institut Supérieur des Études Technologiques de Siliana</p>
+        <p>Note: 13/20</p>
+      </div>
+    </div>
+
+    <!-- STAGE tt -->
+    <div class="vertical-card">
+      <img src="tt.jpg">
+      <div>
+        <h3>Stage 
+          Tunisie Telecom  </h3>
+        <p>Développement + Support IT</p>
+        <p>Installation et configuration d’équipements réseau (routeurs, switch).
+Réalisation, sertissage et maintenance des câblages réseau RJ45.
+Diagnostic et résolution des pannes réseau.
+Vérification et test des connexions réseau à l’aide d’outils de test.
+Maintenance préventive et corrective des installations réseau.
+Assistance technique et accompagnement des utilisateurs</p>
+      </div>
+    </div>
+    <!-- STAGE cni -->
+    <div class="vertical-card">
+      <img src="cni.jpg">
+      <div>
+        <h3>Stage Centre National de l'Informatique (CNI) – Tunis</h3>
+        <p>Développement + Support IT</p>
+        <p>Support technique aux utilisateurs
+Installation et configuration de logiciels professionnels
+Maintenance du matériel informatique
+Gestion et suivi des incidents techniques
+Rédaction de rapports d’intervention</p>
+      </div>
+    </div>
+    <!-- STAGE do -->
+    <div class="vertical-card">
+      <img src="rc.jpg">
+      <div>
+        <h3>Stage DYNOME CONTACT CENTER –</h3>
+        <p>Développement + Support IT</p>
+        <p>Analyse des besoins techniques pour un système de gestion des examens
+Développement et déploiement d’une application de gestion
+Mise en place d’un système d’authentification sécurisé
+Tests, correction des anomalies et optimisation des performances
+Support technique et accompagnement des utilisateurs</p>
+      </div>
+    </div>
+
+    <!-- FORMATION -->
+    <div class="vertical-card">
+      <img src="formation.jpg">
+      <div>
+        <h3>Formations</h3>
+        <p>Flutter - Web - Docker</p>
+      </div>
+    </div>
+
+    <!-- HOBBIES -->
+    <div class="vertical-card">
+      <img src="hobby.jpg">
+      <div>
+        <h3>Hobbies</h3>
+        <p>Informatique 💻 | Design 🎨 | Driving 🚗</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+  <p>
+    Je suis diplômé en développement informatique, passionné par le web, la maintenance et le support technique.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skills-container">
+
+    <div class="skill-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+      <h3>HTML</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">
+      <h3>CSS</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png">
+      <h3>PHP</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+      <h3>Java</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png">
+      <h3>Flutter</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Application gestion examens</h3>
+    <p>Système avec authentification Gmail</p>
+  </div>
+
+  <div class="card">
+    <h3>Application Flutter</h3>
+    <p>Login + gestion données</p>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="card">
+    <p>Email: othmenbadie4@gmail.com</p>
+    <p>Téléphone: 99014315</p>
+    <p>Tunis, Tunisie</p>
+  </div>
+
+</section>
+
+<script>
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
